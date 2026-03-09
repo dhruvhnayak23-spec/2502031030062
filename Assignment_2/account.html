@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - ShoeStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">ShoeStore</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html" class="active">Account</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="cart.html" class="nav-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L7 6m10-4l2 4M6 6h12l-2 14H8L6 6zm6 5v8m-3-8v8m6-8v8"/>
+                        </svg>
+                        <span class="cart-badge">0</span>
+                    </a>
+                    <button class="mobile-menu-toggle">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>My Account</h1>
+            <p>Manage your account and orders</p>
+        </div>
+    </section>
+
+    <!-- Account Content -->
+    <section class="account-page">
+        <div class="container">
+            <!-- Account Tabs -->
+            <div class="account-tabs">
+                <button class="tab-btn active" onclick="switchTab('profile')">Profile</button>
+                <button class="tab-btn" onclick="switchTab('orders')">Orders</button>
+                <button class="tab-btn" onclick="switchTab('addresses')">Addresses</button>
+            </div>
+
+            <!-- Profile Tab -->
+            <div id="profile-tab" class="tab-content">
+                <h2 style="margin-bottom: 1.5rem;">Profile Information</h2>
+                <form onsubmit="handleProfileSubmit(event)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" value="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" value="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profileEmail">Email *</label>
+                        <input type="email" id="profileEmail" value="john.doe@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profilePhone">Phone</label>
+                        <input type="tel" id="profilePhone" value="(555) 123-4567">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Update Profile</button>
+                </form>
+            </div>
+
+            <!-- Orders Tab -->
+            <div id="orders-tab" class="tab-content" style="display: none;">
+                <h2 style="margin-bottom: 1.5rem;">Order History</h2>
+                
+                <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <div>
+                            <h3>Order #12345</h3>
+                            <p style="color: var(--gray-600); font-size: 0.875rem;">Placed on March 1, 2026</p>
+                        </div>
+                        <span style="background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem;">Delivered</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <img src="https://images.unsplash.com/photo-1765914448113-ebf0ce8cb918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydW5uaW5nJTIwc2hvZXMlMjBhdGhsZXRpY3xlbnwxfHx8fDE3NzMwMDQzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Product" style="width: 80px; height: 80px; object-fit: cover; border-radius: 0.5rem;">
+                        <div>
+                            <h4>AeroRunner Pro</h4>
+                            <p style="color: var(--gray-600); font-size: 0.875rem;">Size: 9 | Quantity: 1</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--gray-300);">
+                        <span style="font-weight: 600;">Total:</span>
+                        <span style="font-weight: 600;">$129.99</span>
+                    </div>
+                </div>
+
+                <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 0.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <div>
+                            <h3>Order #12344</h3>
+                            <p style="color: var(--gray-600); font-size: 0.875rem;">Placed on February 15, 2026</p>
+                        </div>
+                        <span style="background: #3b82f6; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem;">Shipped</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <img src="https://images.unsplash.com/photo-1771448802232-24721fe6b674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbmVha2VycyUyMHdoaXRlJTIwbW9kZXJufGVufDF8fHx8MTc3MzA0MDk5Nnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Product" style="width: 80px; height: 80px; object-fit: cover; border-radius: 0.5rem;">
+                        <div>
+                            <h4>CloudStep Classic</h4>
+                            <p style="color: var(--gray-600); font-size: 0.875rem;">Size: 10 | Quantity: 2</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--gray-300);">
+                        <span style="font-weight: 600;">Total:</span>
+                        <span style="font-weight: 600;">$199.98</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Addresses Tab -->
+            <div id="addresses-tab" class="tab-content" style="display: none;">
+                <h2 style="margin-bottom: 1.5rem;">Saved Addresses</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 0.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <h3>Home</h3>
+                            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem;">Default</span>
+                        </div>
+                        <p style="line-height: 1.8;">
+                            John Doe<br>
+                            123 Main Street<br>
+                            New York, NY 10001<br>
+                            United States
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                            <button style="color: var(--primary-color); background: none; border: none; cursor: pointer; font-weight: 600;">Edit</button>
+                            <button style="color: #dc2626; background: none; border: none; cursor: pointer; font-weight: 600;">Delete</button>
+                        </div>
+                    </div>
+
+                    <div style="background: var(--gray-50); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h3 style="margin-bottom: 1rem;">Work</h3>
+                        <p style="line-height: 1.8;">
+                            John Doe<br>
+                            456 Business Ave<br>
+                            New York, NY 10002<br>
+                            United States
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                            <button style="color: var(--primary-color); background: none; border: none; cursor: pointer; font-weight: 600;">Edit</button>
+                            <button style="color: #dc2626; background: none; border: none; cursor: pointer; font-weight: 600;">Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary">Add New Address</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>ShoeStore</h4>
+                    <p>Your premium destination for quality footwear. Step into style with our curated collection.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Email: info@shoestore.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Fashion St, NY</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShoeStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

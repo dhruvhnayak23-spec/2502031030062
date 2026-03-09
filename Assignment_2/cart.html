@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShoeStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">ShoeStore</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="cart.html" class="nav-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L7 6m10-4l2 4M6 6h12l-2 14H8L6 6zm6 5v8m-3-8v8m6-8v8"/>
+                        </svg>
+                        <span class="cart-badge">2</span>
+                    </a>
+                    <button class="mobile-menu-toggle">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <p>Review your items before checkout</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <h2 style="margin-bottom: 1.5rem;">Cart Items</h2>
+                    
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="https://images.unsplash.com/photo-1765914448113-ebf0ce8cb918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydW5uaW5nJTIwc2hvZXMlMjBhdGhsZXRpY3xlbnwxfHx8fDE3NzMwMDQzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="AeroRunner Pro">
+                        </div>
+                        <div class="cart-item-details">
+                            <h3>AeroRunner Pro</h3>
+                            <p>Size: 9</p>
+                            <p>Color: Black</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <span style="font-weight: 600; font-size: 1.125rem;">$129.99</span>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="https://images.unsplash.com/photo-1771448802232-24721fe6b674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbmVha2VycyUyMHdoaXRlJTIwbW9kZXJufGVufDF8fHx8MTc3MzA0MDk5Nnww&ixlib=rb-4.1.0&q=80&w=1080" alt="CloudStep Classic">
+                        </div>
+                        <div class="cart-item-details">
+                            <h3>CloudStep Classic</h3>
+                            <p>Size: 10</p>
+                            <p>Color: White</p>
+                            <p>Quantity: 1</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <span style="font-weight: 600; font-size: 1.125rem;">$99.99</span>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2 style="margin-bottom: 1.5rem;">Order Summary</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$229.98</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>FREE</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>$18.40</span>
+                    </div>
+                    
+                    <div class="summary-row" style="border: none; margin-bottom: 1.5rem;">
+                        <span class="summary-total">Total</span>
+                        <span class="summary-total">$248.38</span>
+                    </div>
+                    
+                    <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+                    
+                    <a href="shop.html" style="display: block; text-align: center; margin-top: 1rem; color: var(--gray-600); text-decoration: none;">Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- Empty Cart State (hidden by default, shown when cart is empty) -->
+            <div class="empty-cart" style="display: none;">
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem;">
+                    <path d="M9 2L7 6m10-4l2 4M6 6h12l-2 14H8L6 6zm6 5v8m-3-8v8m6-8v8"/>
+                </svg>
+                <h2>Your cart is empty</h2>
+                <p style="color: var(--gray-600); margin-bottom: 2rem;">Add some items to your cart to get started</p>
+                <a href="shop.html" class="btn btn-secondary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>ShoeStore</h4>
+                    <p>Your premium destination for quality footwear. Step into style with our curated collection.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Email: info@shoestore.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Fashion St, NY</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShoeStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

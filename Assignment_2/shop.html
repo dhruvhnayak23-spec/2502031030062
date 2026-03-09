@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ShoeStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">ShoeStore</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="cart.html" class="nav-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L7 6m10-4l2 4M6 6h12l-2 14H8L6 6zm6 5v8m-3-8v8m6-8v8"/>
+                        </svg>
+                        <span class="cart-badge">0</span>
+                    </a>
+                    <button class="mobile-menu-toggle">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Collection</h1>
+            <p>Discover our complete range of premium footwear</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-content">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters -->
+                <aside class="filters">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="all" checked>
+                                <span>All</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="running">
+                                <span>Running</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="casual">
+                                <span>Casual</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="basketball">
+                                <span>Basketball</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="outdoor">
+                                <span>Outdoor</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="formal">
+                                <span>Formal</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="boots">
+                                <span>Boots</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="0-50">
+                                <span>$0 - $50</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="50-100">
+                                <span>$50 - $100</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="100-150">
+                                <span>$100 - $150</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="price" value="150+">
+                                <span>$150+</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products -->
+                <div class="products-grid">
+                    <a href="product-detail.html?id=1" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1765914448113-ebf0ce8cb918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydW5uaW5nJTIwc2hvZXMlMjBhdGhsZXRpY3xlbnwxfHx8fDE3NzMwMDQzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="AeroRunner Pro">
+                        </div>
+                        <div class="product-info">
+                            <h3>AeroRunner Pro</h3>
+                            <p class="product-category">Running</p>
+                            <div class="product-footer">
+                                <span class="product-price">$129.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=2" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1771448802232-24721fe6b674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbmVha2VycyUyMHdoaXRlJTIwbW9kZXJufGVufDF8fHx8MTc3MzA0MDk5Nnww&ixlib=rb-4.1.0&q=80&w=1080" alt="CloudStep Classic">
+                        </div>
+                        <div class="product-info">
+                            <h3>CloudStep Classic</h3>
+                            <p class="product-category">Casual</p>
+                            <div class="product-footer">
+                                <span class="product-price">$99.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=3" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1728637690618-6f3fc7d7d015?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXNrZXRiYWxsJTIwc2hvZXMlMjBzcG9ydHxlbnwxfHx8fDE3NzMwMzkyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="CourtMaster Elite">
+                        </div>
+                        <div class="product-info">
+                            <h3>CourtMaster Elite</h3>
+                            <p class="product-category">Basketball</p>
+                            <div class="product-footer">
+                                <span class="product-price">$149.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=4" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1659724527701-77bec4618995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXN1YWwlMjBzaG9lcyUyMGxpZmVzdHlsZXxlbnwxfHx8fDE3NzMwNDczMTB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="UrbanWalk Comfort">
+                        </div>
+                        <div class="product-info">
+                            <h3>UrbanWalk Comfort</h3>
+                            <p class="product-category">Casual</p>
+                            <div class="product-footer">
+                                <span class="product-price">$79.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=5" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1760402160205-e579a99a7347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWtpbmclMjBib290cyUyMG91dGRvb3J8ZW58MXx8fHwxNzczMDA0MTY0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="TrailBlazer Pro">
+                        </div>
+                        <div class="product-info">
+                            <h3>TrailBlazer Pro</h3>
+                            <p class="product-category">Outdoor</p>
+                            <div class="product-footer">
+                                <span class="product-price">$159.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=6" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1552422554-0d5af0c79fc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3JtYWwlMjBkcmVzcyUyMHNob2VzfGVufDF8fHx8MTc3MzAwNDE2NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Executive Oxford">
+                        </div>
+                        <div class="product-info">
+                            <h3>Executive Oxford</h3>
+                            <p class="product-category">Formal</p>
+                            <div class="product-footer">
+                                <span class="product-price">$139.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=7" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1743591684800-c8cfba557087?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYW5kYWxzJTIwc3VtbWVyJTIwZm9vdHdlYXJ8ZW58MXx8fHwxNzczMDA0MTY1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="BeachBreeze Sandals">
+                        </div>
+                        <div class="product-info">
+                            <h3>BeachBreeze Sandals</h3>
+                            <p class="product-category">Casual</p>
+                            <div class="product-footer">
+                                <span class="product-price">$49.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html?id=8" class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1769038946405-c1f89366a8de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib290cyUyMGxlYXRoZXIlMjBmYXNoaW9ufGVufDF8fHx8MTc3MzA0NzMxMXww&ixlib=rb-4.1.0&q=80&w=1080" alt="StyleCraft Boots">
+                        </div>
+                        <div class="product-info">
+                            <h3>StyleCraft Boots</h3>
+                            <p class="product-category">Boots</p>
+                            <div class="product-footer">
+                                <span class="product-price">$189.99</span>
+                                <div class="product-rating">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>ShoeStore</h4>
+                    <p>Your premium destination for quality footwear. Step into style with our curated collection.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Email: info@shoestore.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Fashion St, NY</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ShoeStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
